@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>一箱古本市</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+
+      <div class="opacity">
+      <header>全国一箱古本市</header>
+    <div class="header-logo">一箱店主さんの力になるべく、全国の一箱古本市の情報を紹介しています。
+    <li>随時更新中！</li></div>
+      <div class="container">
+        <div class="header-left">
+        </div>
+        </div>
+
+<ul class="list_article">
+  <% @article.each do |article| %>
+  <li>
+    <h2 class="title">
+      <%=  link_to(article.title, "/articles/#{article.id}") %>
+    </h2>
+    <% if article.image != "" %>
+    <%= article.day %>
+    <% end %>
+
+    <p><%= article.created_at %></p>
+  </li>
+  <% end %>
+</ul>
+</div>
+</body>
+</html>
