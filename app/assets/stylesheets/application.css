@@ -16,7 +16,7 @@
 
  body {
    font-family: "Lucida Grande";
-   background-color:#bdf7f1;
+   background-color: #bdf7f1;
    background-image: url("/syasin.jpg");
    background-size: cover;
 
@@ -55,10 +55,10 @@ ul {
   height: 60;
 }
 
-title{
-  font-size: 30px
-  background-color: #dee7ec;
-    color: #239b76;
+title {
+  font-size: 30px;
+  background-color: #bdf7f1;
+  color: #239b76;
 }
 
 .new {
