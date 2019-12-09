@@ -43,9 +43,5 @@ def destroy
   redirect_to("/")
 end
 
-private
-def article_params
-  params.require(:article).permit(:text, :content, :img, :remove_img)
-end
 
 end
