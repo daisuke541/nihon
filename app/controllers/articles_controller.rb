@@ -12,7 +12,8 @@ def new
 end
 
 def create
-  @article = Article.new(content: params[:content])
+  @article = Article.new(content: params[:content],
+  title: params[:title],day: params[:day])
   if @article.save
   flash[:notice] = "投稿を作成しました"
   redirect_to("/")
@@ -28,6 +29,9 @@ end
 def update
   @article = Article.find_by(id: params[:id])
   @article.content = params[:content] #name属性でparamsに代入されupdateアクションに送られる。値をparams[:content]で受け取り、投稿内容の更新をする。
+  @article.title = params[:title]
+  @article.day = params[:day]
+
   if @article.save
     flash[:notice] = "投稿を編集しました"
     redirect_to("/")
@@ -43,5 +47,9 @@ def destroy
   redirect_to("/")
 end
 
+private
+def article_params
+  params.require(:article).permit(:text, :content, :img, :remove_img)
+end
 
 end
