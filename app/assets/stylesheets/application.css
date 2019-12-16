@@ -61,9 +61,9 @@ ul {
 title {
   font-size: 30px;
   background-color: #bdf7f1;
-  color: #239b76
-  border: 5px solid black;
+  color: #239b76;
   float: left;
+  border :5px solid black;
 }
 
 .list_article {
