@@ -23,13 +23,13 @@
 }
 .opacity {
   height: 100%;
-  background: rgba(300,255,255,0.3);
+  background: rgba(300,255,255,0.7);
 }
 
 
 header {
   font-size: 40px;
-  color: #00FFFF;
+  color: blue;
   height: 60px;
  padding-left: 20px;
  padding-top: 0px;
@@ -37,7 +37,7 @@ header {
 }
 .header-logo {
   font-size: 18px;
-  color: #00FFFF;
+  color: blue;
   padding-left: 30px;
   height: 60px;
   font-weight: bolder;
