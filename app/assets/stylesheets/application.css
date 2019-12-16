@@ -29,21 +29,24 @@
 
 header {
   font-size: 40px;
-  color: blue;
+  color: #00FFFF;
   height: 60px;
  padding-left: 20px;
  padding-top: 0px;
+ font-weight: bold;
 }
 .header-logo {
   font-size: 18px;
-  color: blue;
+  color: #00FFFF;
   padding-left: 30px;
   height: 60px;
+  font-weight: bolder;
 }
 
-.container {
-  padding-left: 30px;
+.index-day {
+color :black;
 }
+
 
 li {
   list-style:none;
@@ -58,11 +61,70 @@ ul {
 title {
   font-size: 30px;
   background-color: #bdf7f1;
-  color: #239b76;
+  color: #239b76
+  border: 5px solid black;
+  float: left;
+}
+
+.list_article {
+  clear: both;
 }
 
 .new {
   color: blue;
   display: inline-block;
 
+}
+
+textarea {
+  font-size: 20px;
+  text-align:left;
+  display: flex;
+  align-items: center;
+  margin:0 auto;
+  width: 700px;
+  height: 100px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.btn-submit {
+  width:300px;
+  height: 50px;
+  align-items: right;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #666;
+  font-size: 18px;
+  color: #fff;
+  margin: 10px;
+}
+
+.btn-submit:active {
+  background-color: #888;
+}
+
+.articletitle {
+  font-size: 30px;
+  float:left;
+  padding-right: 30px
+}
+.articleday {
+  font-size: 30px;
+  padding: 23px;
+}
+.articlecontent {
+  font-size: 20px;
+  padding-bottom: 30px;
+  clear: both;
+}
+
+.post-time {
+  font-size: 20px;
+}
+
+.post-menus {
+  font-size: 20px;
+  padding-top: 10px;
 }

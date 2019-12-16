@@ -9,7 +9,8 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @article = Article.new(content: params[:content])
+    @article = Article.new(content: params[:content],
+    title: params[:title],day: params[:day])
     if @article.save
     flash[:notice] = "投稿を作成しました"
     redirect_to("/")
