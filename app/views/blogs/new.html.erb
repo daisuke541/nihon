@@ -1,5 +1,6 @@
 <div class="contents row">
   <a href="/">一覧にもどる</a>
+  </div>
   <%= form_tag('/create', method: :post) do %>
     <h3>
       投稿する
@@ -14,11 +15,10 @@
           <%= message %>
           </div>
           <% end %>
-    <p><input type="text" name="title" placeholder="タイトル"></p>
-    <p><input type="text" name="day" placeholder="開催日"></p>
-    <textarea name="content" placeholder="記事を書いてください" rows="10" cols="50"><%= @article.content %></textarea>
-    <p><input type="submit" value="投稿"></p>
+          <textarea name="title" placeholder="タイトル"><%= @article.title %></textarea>
+          <textarea name="day" placeholder="開催日"><%= @article.day %></textarea>
+          <textarea name="content" placeholder="記事を書いてください" rows="10" cols="50"><%= @article.content %></textarea>
+          <input type="submit" value="保存" class="btn-submit">
     </div>
     </div>
   <% end %>
-</div>

@@ -16,18 +16,32 @@
   </head>
 
   <body>
+    <div class="rgba">
     <header>
-      <div class="header-logo">
-        <%= link_to("home","/") %>
+      全国一箱古本市
+      </header>
+    <div class="header-logo">一箱店主さんの力になるべく、全国の一箱古本市の情報を紹介しています。
+    <li>随時更新中！</li>
+    </div>
+      <div class="container">
+        <div class="header-left">
+        </div>
+        </div>
+      <div class="logo">
+        <%= link_to("home","/" , {class: "home"}) %>
         <%= link_to("新規投稿", "/articles/new", {class: "new"}) %>
         </div>
         <ul class="heder-menus">
         </ul>
-        </header>
+
+        </div>
+
         <% if flash[:notice] %>
         <div class="flash">
           <%= flash[:notice] %>
           </div>
+
+
           <% end %>
     <%= yield %>
   </body>
