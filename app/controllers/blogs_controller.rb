@@ -2,6 +2,8 @@ class BlogsController < ApplicationController
 
   def index
     @article = Article.all.order(created_at: :desc)
+    @article = Article.all.page(params[:page])
+
   end
 
   def new
