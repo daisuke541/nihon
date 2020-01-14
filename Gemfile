@@ -22,8 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# gem "kaminari"
-# gem "simple_calendar", "~> 2.0"
+gem "kaminari"
+
 
 
 
@@ -53,11 +53,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
+
 end
 
 group :production do
-  gem 'pg'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -8,21 +8,17 @@
   </head>
   <body>
 
-
-
-
-
-
 <ul>
   <li>
     <h1 class="list_article">
-  <% @article.each do |article| %>
+  <% @articles.each do |article| %>
     </h1>
     <h2 class="title">
       <%=  link_to(article.title, "/articles/#{article.id}") %>
     </h2>
     <% if article.image != "" %>
-    <p class="index-day"><%= article.day %></p>
+    <p class="index-day">
+      <%= article.day %></p>
     <% end %>
 
     <p><%= article.created_at %></p>
@@ -30,6 +26,6 @@
   <% end %>
 </ul>
 
-
+<%= paginate(@articles) %>
 </body>
 </html>

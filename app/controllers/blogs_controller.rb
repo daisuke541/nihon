@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
+
   def index
-    @article = Article.all.order(created_at: :desc)
+    @articles = Article.page(params[:page]).per(10)
   end
 
   def new
@@ -8,9 +9,9 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @article = Article.new(content: params[:content],
+    @articles = Article.new(content: params[:content],
     title: params[:title],day: params[:day])
-    if @article.save
+    if @articles.save
     flash[:notice] = "投稿を作成しました"
     redirect_to("/")
   else

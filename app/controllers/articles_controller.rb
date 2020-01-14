@@ -1,18 +1,15 @@
 class ArticlesController < ApplicationController
-def index
-  @article = Article.all
-end
 
 def show
-  @article = Article.find_by(id: params[:id])
+  @articles = Article.find_by(id: params[:id])
 end
 
 def new
-  @article = Article.new
+  @articles = Article.new
 end
 
 def create
-  @article = Article.new(content: params[:content],
+  @articles = Article.new(content: params[:content],
   title: params[:title],day: params[:day])
   if @article.save
   flash[:notice] = "投稿を作成しました"

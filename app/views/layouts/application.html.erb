@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -18,7 +20,7 @@
   <body>
     <div class="rgba">
     <header>
-      全国一箱古本市
+      <%= link_to("全国一箱古本市","/", {class: "header"}) %>
       </header>
     <div class="header-logo">一箱店主さんの力になるべく、全国の一箱古本市の情報を紹介しています。
     <li>随時更新中！</li>
