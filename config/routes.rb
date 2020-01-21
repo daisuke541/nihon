@@ -18,13 +18,15 @@ post "articles/:id/destroy" => "articles#destroy" #　投稿削除
 
 get 'users/index' => "users#index" #　ユーザー一覧
 
-#get "users/new" => "users#new" # ユーザー登録
+post "users/create" => "users#create" #ユーザー作成
 
- # get "users/:id" => "users#show"　# ユーザー詳細
+get "users/signup" => "users#new" # ユーザー登録
 
-# get "users/:id/edit" => "users#edit" 　# ユーザー編集
+get "users/:id" => "users#show"
 
-# post "users/:id/update" => "users#update" # ユーザー更新
+get "users/:id/edit" => "users#edit"
+
+post "users/:id/update" => "users#update" # ユーザー更新
 
 # post "users/:id/destroy" => "users#destroy" #ユーザー削除
 
