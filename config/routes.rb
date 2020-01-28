@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :meetings
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "login" => "users/login_form" #ログイン
+
   get 'users/index' => "users#index" #　ユーザー一覧
 
   post "users/create" => "users#create" #ユーザー作成

@@ -49,4 +49,8 @@ def update
     render("users/edit")
   end
 end
+
+  def login_form
+  end
+  
 end
