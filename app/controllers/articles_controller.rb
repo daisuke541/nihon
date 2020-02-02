@@ -1,15 +1,14 @@
 class ArticlesController < ApplicationController
 
-def show
-  @articles = Article.find_by(id: params[:id])
-end
+
+before_action :authenticate_user,{only:[:edit, :update, :destroy]}
 
 def new
-  @articles = Article.new
+  @article = Article.new
 end
 
 def create
-  @articles = Article.new(content: params[:content],
+  @article = Article.new(content: params[:content],
   title: params[:title],day: params[:day])
   if @article.save
   flash[:notice] = "投稿を作成しました"
@@ -18,6 +17,13 @@ else
   render("articles/new")
 end
 end
+
+def show
+  @article = Article.find_by(id: params[:id])
+end
+
+
+
 
 def edit
   @article = Article.find_by(id: params[:id])

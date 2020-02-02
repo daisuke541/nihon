@@ -31,19 +31,18 @@
         </div>
       <div class="logo">
         <ul class="heder-menus">
-          <% current_user = User.find_by(id: session[:user_id]) %>
-          <% if current_user %>
+          <% if @current_user %>
 
           <li>
-            <%= link_to(current_user.name, "/users/#{current_user.id}") %>
-            </li>
-
+        <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          </li>
         <%= link_to("home","/" , {class: "home"}) %>
         <%= link_to("新規投稿", "/articles/new", {class: "new"}) %>
         <%= link_to("ユーザー一覧", "/users/index", {class: "usersindex"}) %>
         <%= link_to("ログアウト", "/logout", {method: :post}) %>
 
         <% else %>
+        <%= link_to("home","/" , {class: "home"}) %>
         <%= link_to("新規登録", "/users/signup", {class: "signup"}) %>
         <%= link_to("ログイン", "/login") %>
 

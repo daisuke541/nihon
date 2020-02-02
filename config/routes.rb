@@ -25,9 +25,9 @@ Rails.application.routes.draw do
 
 get "/" => "blogs#index" # 一覧画面
 
-get 'articles/new' => 'blogs#new' # 投稿画面
+get 'articles/new' => 'articles#new' # 投稿画面
 
-post 'create' => 'blogs#create' # 投稿機能
+post 'create' => "articles#create" # 投稿機能
 
 get "articles/:id" => "articles#show"
 
