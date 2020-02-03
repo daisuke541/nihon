@@ -38,9 +38,10 @@ header {
  font-weight: bolder;
  padding :25px 25px;
  background: rgba(300,255,255,0.3);
-
-
-
+ text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0 -1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
 }
 .header-logo {
   color: #bdf7f1;
@@ -48,6 +49,22 @@ header {
   font-weight: bolder;
   padding :10px 35px;
   background: rgba(300,255,255,0.3);
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black,
+               -1px 1px 0 black, 1px -1px 0 black,
+               0px 1px 0 black,  0 -1px 0 black,
+               -1px 0 0 black, 1px 0 0 black;
+  line-height: 25px;
+}
+
+.header-menus {
+  font-size: 20px;
+  padding: 10px 5px 0px 0px;
+  color: #FFF;
+  font-weight: bolder;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black,
+               -1px 1px 0 black, 1px -1px 0 black,
+               0px 1px 0 black,  0 -1px 0 black,
+               -1px 0 0 black, 1px 0 0 black;
 
 }
 
@@ -107,6 +124,17 @@ title {
   color: #239b76;
   display: inline-block;
   padding-right: 15px;
+}
+
+.form-heading {
+  font-size: 20px;
+  padding: 20px 0px;
+  color: #FFF;
+  font-weight: bolder;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black,
+               -1px 1px 0 black, 1px -1px 0 black,
+               0px 1px 0 black,  0 -1px 0 black,
+               -1px 0 0 black, 1px 0 0 black;
 }
 
 .signup {
