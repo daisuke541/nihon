@@ -9,7 +9,7 @@ end
 
 def create
   @article = Article.new(content: params[:content],
-  title: params[:title],day: params[:day])
+  title: params[:title],day: params[:day],user_id: @current_user.id)
   if @article.save
   flash[:notice] = "投稿を作成しました"
   redirect_to("/")
@@ -20,6 +20,7 @@ end
 
 def show
   @article = Article.find_by(id: params[:id])
+  @user = @article.user
 end
 
 
