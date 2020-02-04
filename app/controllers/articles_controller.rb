@@ -9,8 +9,9 @@ end
 
 def create
   @article = Article.new(content: params[:content],
-  title: params[:title],day: params[:day],user_id: @current_user.id)
-  if @article.save
+  title: params[:title],day: params[:day],user_id: @current_user.id
+)
+if @article.save
   flash[:notice] = "投稿を作成しました"
   redirect_to("/")
 else
@@ -20,11 +21,8 @@ end
 
 def show
   @article = Article.find_by(id: params[:id])
-  @user = @article.user
+  @user = User.find_by(id: @article.user_id)
 end
-
-
-
 
 def edit
   @article = Article.find_by(id: params[:id])
