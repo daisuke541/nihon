@@ -49,6 +49,14 @@ def destroy
   redirect_to("/")
 end
 
+def ensure_corrent_user
+@article = Article.find_by(id: params[:id])
+  if @article.user_id != current_user.id
+    flash[:notice] = "権限がありません"
+    redirect("/")
+  end
+end
+
 private
 def article_params
   params.require(:article).permit(:text, :content, :img, :remove_img)

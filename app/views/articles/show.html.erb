@@ -3,7 +3,7 @@
     <div class="posts-show-item">
 
       <div class="post-user-name">
-        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <img src="<%= "/user_images.jpg/#{@user.image_name}" %>">
 
         <%= link_to(@user.name, "/users/#{@user.id}") %>
         </div>
@@ -21,11 +21,12 @@
         <div class="post-time">
         <%= @article.created_at %>
         </div>
-
+        <% if @article.user_id == @current_user.id %>
 
         <div class="post-menus">
           <%= link_to("編集", "/articles/#{@article.id}/edit") %>
           <%= link_to("削除", "/articles/#{@article.id}/destroy", {method: "post"}) %>
+          <% end %>
           <%= link_to("home","/") %>
           </div>
           </div>

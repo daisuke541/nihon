@@ -4,14 +4,15 @@
       <img src="<%="/user_images.jpg/#{@user.image_name}"%>">
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
-      <img src="<%= "/user_images/#{@user.image_name}" %>">
       <% if @user.id == @current_user.id %>
       <%= link_to("編集", "/users/#{@user.id}/edit") %>
       <% end %>
 
       <% @user.articles.each do |article| %>
       <div class="articles-index-item">
+
         <div class="article-left">
+          <img src="<%="/user_images.jpg/#{@user.image_name}"%>">
           </div>
           <div class="article-right">
             <%= link_to(article.user.name, "/users/#{article.user.id}") %>

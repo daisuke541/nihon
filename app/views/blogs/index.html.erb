@@ -14,10 +14,10 @@
   <% @articles.each do |article| %>
     </h1>
     <div class="article-left">
-      <img src="<%="/user_images.jpg/#{@user.image_name}"%>">
+      <img src="<%="/user_images.jpg/#{article.user.image_name}"%>">
       </div>
       <div class="article-user-name">
-        <%= link_to(@user.name, "/users/#{@user.id}") %>
+        <%= link_to(article.user.name, "/users/#{article.user.id}") %>
       </div>
     <h2 class="title">
       <%=  link_to(article.title, "/articles/#{article.id}") %>
