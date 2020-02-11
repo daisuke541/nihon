@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   resources :meetings
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  post "likes/:article_id/create" => "likes#create" # いいね
+
+  post "likes/:article_id/destroy" => "likes#destroy" #いいね削除
+
+  get "users/:id/likes" => "users#likes"
+
   get "login" => "users#login_form" #ログイン
 
   post "login" => "users#login" # ログインフォーム受け取り

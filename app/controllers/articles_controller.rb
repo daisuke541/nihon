@@ -22,7 +22,9 @@ end
 def show
   @article = Article.find_by(id: params[:id])
   @user = User.find_by(id: @article.user_id)
-end
+  @likes_count = Like.where(article_id: @article.id).count
+  end
+
 
 def edit
   @article = Article.find_by(id: params[:id])

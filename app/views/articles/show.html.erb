@@ -1,8 +1,8 @@
-<div class="main posts-show">
+<div class="main articles-show">
   <div class="container">
-    <div class="posts-show-item">
+    <div class="articles-show-item">
 
-      <div class="post-user-name">
+      <div class="article-user-name">
         <img src="<%= "/user_images.jpg/#{@user.image_name}" %>">
 
         <%= link_to(@user.name, "/users/#{@user.id}") %>
@@ -18,16 +18,32 @@
         <%= @article.content %>
         </div>
 
-        <div class="post-time">
+        <% if Like.find_by(user_id: @current_user.id, article_id: @article.id) %>
+        <%= link_to("/likes/#{@article.id}/destroy", {method: "post"}) do %>
+        <span class="fa fa-heart like-btn-unlike"></span>
+        <% end %>
+        <% else %>
+        <%= link_to("/likes/#{@article.id}/create", {method: "post"}) do %>
+        <span class="fa fa-heart like-btn-unlike"></span>
+        <% end %>
+        <% end %>
+
+        <%= @likes_count %>
+
+
+        <div class="article-time">
         <%= @article.created_at %>
         </div>
+        <div class="article-menus">
         <% if @article.user_id == @current_user.id %>
 
-        <div class="post-menus">
           <%= link_to("編集", "/articles/#{@article.id}/edit") %>
           <%= link_to("削除", "/articles/#{@article.id}/destroy", {method: "post"}) %>
           <% end %>
           <%= link_to("home","/") %>
+
+
+
           </div>
           </div>
           </div>
